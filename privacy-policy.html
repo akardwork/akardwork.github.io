@@ -11,7 +11,7 @@
 </head>
 <body>
   <h1>Privacy Policy - Calendario VVF</h1>
-  <p>Ultimo aggiornamento: maggio 2026</p>
+  <p>Ultimo aggiornamento: 28 maggio 2026</p>
 
   <h2>Informazioni generali</h2>
   <p>Calendario VVF è un'app per la gestione dei turni dei Vigili del Fuoco. Questa privacy policy descrive quali dati vengono raccolti e come vengono utilizzati.</p>
@@ -19,23 +19,49 @@
   <h2>Dati raccolti e servizi Google utilizzati</h2>
 
   <h3>Google Sign-In</h3>
-  <p>L'app utilizza Google Sign-In per l'autenticazione. Vengono acquisiti nome, indirizzo email e identificativo dell'account Google esclusivamente per abilitare i servizi di backup e sincronizzazione.</p>
+  <p>L'app utilizza Google Sign-In per l'autenticazione. Vengono acquisiti nome, indirizzo email e identificativo dell'account Google esclusivamente per abilitare il servizio di backup.</p>
 
   <h3>Google Drive</h3>
   <p>L'app accede alla cartella privata dell'applicazione su Google Drive (<code>appDataFolder</code>) per salvare automaticamente un backup cifrato dei dati del calendario. Questo backup è visibile e accessibile solo all'app stessa e non è visibile nel Drive dell'utente. I dati non vengono condivisi con terze parti.</p>
 
-  <h3>Google Calendar</h3>
-  <p>Se l'utente attiva la sincronizzazione, l'app crea un calendario dedicato chiamato "Calendario VVF" nell'account Google dell'utente e vi sincronizza le note e gli eventi inseriti nell'app. La sincronizzazione è opzionale e può essere disattivata in qualsiasi momento dalle impostazioni.</p>
-
   <h3>Firebase (Google Cloud)</h3>
   <p>L'app utilizza Firebase per:</p>
   <ul>
-    <li><strong>Notifiche push (FCM)</strong>: invio di avvisi (es. allerte terremoti) al dispositivo dell'utente.</li>
+    <li><strong>Notifiche push (FCM)</strong>: invio di avvisi (es. allerte terremoti, meteo) al dispositivo dell'utente.</li>
     <li><strong>Firestore</strong>: registrazione del dispositivo per la ricezione delle notifiche. Vengono salvati token di notifica e impostazioni relative alle allerte.</li>
   </ul>
 
   <h3>Google AdMob</h3>
   <p>L'app può mostrare annunci pubblicitari tramite Google AdMob. AdMob può raccogliere dati anonimi per la personalizzazione degli annunci secondo la propria <a href="https://policies.google.com/privacy">privacy policy di Google</a>.</p>
+
+  <h2>Posizione (GPS)</h2>
+  <p>L'app accede alla posizione GPS del dispositivo, previo consenso esplicito dell'utente al momento della richiesta del permesso, per le seguenti finalità:</p>
+  <ul>
+    <li>Registrazione di tracce GPS e waypoint, salvati esclusivamente in locale sul dispositivo dell'utente.</li>
+    <li>Associazione automatica delle coordinate alle foto scattate come waypoint durante la registrazione di una traccia.</li>
+    <li>Convertitore di coordinate geografiche (visualizzazione della posizione corrente in vari formati).</li>
+    <li>Recupero di allerte meteo (Protezione Civile) e allerte sismiche (INGV) relative alla zona della sede impostata dall'utente.</li>
+  </ul>
+  <p><strong>Posizione in background:</strong> l'app può accedere alla posizione anche quando è in background o a schermo spento, esclusivamente durante una registrazione di traccia GPX avviata dall'utente, per non interrompere il tracciamento. Il tracciamento si ferma quando l'utente lo interrompe manualmente.</p>
+  <p>I dati di posizione <strong>non vengono trasmessi a server gestiti dallo sviluppatore</strong> né condivisi con terze parti. Restano memorizzati localmente sul dispositivo dell'utente all'interno dei file di traccia GPX. L'utente può eliminarli in qualsiasi momento dalla schermata "Tracce effettuate" dell'app, o revocare il permesso GPS dalle impostazioni di sistema del telefono.</p>
+
+  <h2>Fotocamera</h2>
+  <p>L'app accede alla fotocamera, previo consenso dell'utente, per:</p>
+  <ul>
+    <li>Scattare foto da allegare alle note del calendario.</li>
+    <li>Scattare foto da associare ai waypoint durante la registrazione di una traccia GPX (foto geolocalizzate).</li>
+  </ul>
+  <p>Le foto vengono salvate localmente sul dispositivo dell'utente e <strong>non vengono caricate su server esterni</strong>.</p>
+
+  <h2>Galleria foto</h2>
+  <p>L'app può accedere alle immagini selezionate dall'utente per allegarle come foto a note o waypoint. L'accesso avviene solo quando l'utente sceglie attivamente di importare una foto. Le immagini selezionate restano locali al dispositivo e non vengono trasmesse a terze parti.</p>
+
+  <h2>Microfono</h2>
+  <p>L'app dichiara il permesso di accesso al microfono come dipendenza tecnica di alcune librerie multimediali utilizzate. Il microfono <strong>non viene utilizzato</strong> per registrare audio, trasmettere o memorizzare alcun dato sonoro.</p>
+
+  <h2>Conservazione e cancellazione dei dati</h2>
+  <p>Tutti i dati creati dall'utente (turni, note, foto, tracce GPX, waypoint, sede impostata) sono memorizzati localmente sul dispositivo. L'utente può cancellarli in qualsiasi momento direttamente dall'app o disinstallando l'applicazione.</p>
+  <p>Eventuali backup su Google Drive sono salvati sull'account Google dell'utente, di cui lo sviluppatore non ha accesso.</p>
 
   <h2>Condivisione dei dati</h2>
   <p>I dati degli utenti non vengono venduti né ceduti a terze parti. I dati sono utilizzati esclusivamente per il funzionamento delle funzionalità dell'app.</p>
@@ -47,7 +73,8 @@
   <p>L'utente può in qualsiasi momento:</p>
   <ul>
     <li>Disattivare il backup su Drive dalle impostazioni dell'app</li>
-    <li>Disattivare la sincronizzazione con Google Calendar</li>
+    <li>Eliminare singole tracce, waypoint, foto o note direttamente dall'app</li>
+    <li>Revocare i permessi (GPS, fotocamera, ecc.) dalle impostazioni di sistema del telefono</li>
     <li>Revocare i permessi concessi all'app dal proprio account Google su <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a></li>
   </ul>
 
