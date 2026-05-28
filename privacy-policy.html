@@ -34,13 +34,25 @@
   <h3>Google AdMob</h3>
   <p>L'app può mostrare annunci pubblicitari tramite Google AdMob. AdMob può raccogliere dati anonimi per la personalizzazione degli annunci secondo la propria <a href="https://policies.google.com/privacy">privacy policy di Google</a>.</p>
 
+  <h2>Servizi esterni utilizzati dall'app</h2>
+  <p>Per il proprio funzionamento, l'app effettua richieste ai seguenti servizi esterni. Le richieste possono includere coordinate geografiche o l'indirizzo IP del dispositivo, esclusivamente per ottenere il dato richiesto (es. meteo locale, indirizzo del punto, mappa). Nessun dato personale identificativo viene trasmesso.</p>
+  <ul>
+    <li><strong>Backend allerte (Cloudflare Workers)</strong>: <code>calendario-vvf-push.calendariovvf.workers.dev</code> — gestito dallo sviluppatore. Riceve il token di notifica del dispositivo e la sede impostata dall'utente per inoltrare allerte meteo e sismiche personalizzate. Non vengono raccolti dati anagrafici.</li>
+    <li><strong>MET Norway</strong> (<code>api.met.no</code>): previsioni meteo. Vengono inviate le coordinate GPS della sede.</li>
+    <li><strong>INGV</strong> (<code>webservices.ingv.it</code>) e <strong>USGS</strong> (<code>earthquake.usgs.gov</code>): elenco terremoti pubblici.</li>
+    <li><strong>Photon / Komoot</strong> e <strong>BigDataCloud</strong>: reverse geocoding (conversione coordinate → indirizzo testuale).</li>
+    <li><strong>ipwho.is / ipapi.co / geojs.io</strong>: geolocalizzazione approssimata tramite indirizzo IP, usata come fallback quando il GPS non è disponibile.</li>
+    <li><strong>Esri ArcGIS Online</strong> e <strong>OpenStreetMap</strong>: tile di mappa per la visualizzazione cartografica.</li>
+  </ul>
+  <p>Ognuno di questi servizi è soggetto alla propria privacy policy. Lo sviluppatore non condivide con essi alcun dato identificativo dell'utente.</p>
+
   <h2>Posizione (GPS)</h2>
   <p>L'app accede alla posizione GPS del dispositivo, previo consenso esplicito dell'utente al momento della richiesta del permesso, per le seguenti finalità:</p>
   <ul>
     <li>Registrazione di tracce GPS e waypoint, salvati esclusivamente in locale sul dispositivo dell'utente.</li>
     <li>Associazione automatica delle coordinate alle foto scattate come waypoint durante la registrazione di una traccia.</li>
     <li>Convertitore di coordinate geografiche (visualizzazione della posizione corrente in vari formati).</li>
-    <li>Recupero di allerte meteo (Protezione Civile) e allerte sismiche (INGV) relative alla zona della sede impostata dall'utente.</li>
+    <li>Recupero di allerte meteo (MET Norway) e allerte sismiche (INGV) relative alla zona della sede impostata dall'utente.</li>
   </ul>
   <p><strong>Posizione in background:</strong> l'app può accedere alla posizione anche quando è in background o a schermo spento, esclusivamente durante una registrazione di traccia GPX avviata dall'utente, per non interrompere il tracciamento. Il tracciamento si ferma quando l'utente lo interrompe manualmente.</p>
   <p>I dati di posizione <strong>non vengono trasmessi a server gestiti dallo sviluppatore</strong> né condivisi con terze parti. Restano memorizzati localmente sul dispositivo dell'utente all'interno dei file di traccia GPX. L'utente può eliminarli in qualsiasi momento dalla schermata "Tracce effettuate" dell'app, o revocare il permesso GPS dalle impostazioni di sistema del telefono.</p>
