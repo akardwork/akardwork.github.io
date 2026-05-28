@@ -5,7 +5,6 @@
 ## Funzionalità principali
 - Gestione turni e calendario personale
 - Backup automatico su Google Drive
-- Sincronizzazione con Google Calendar
 - Notifiche push per allerte
 
 ## Link utili
